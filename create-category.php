@@ -6,3 +6,6 @@
  * Time:12:13 pm
  *
  */
+
+include "header.php";
+include "footer.php";

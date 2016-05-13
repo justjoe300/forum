@@ -21,5 +21,7 @@
  * the passwords somehow
  * When you have it ready, just send me credentials for an admin account and either put the source on Github or email to me.
  */
-require "header.php";
-
+include "header.php";
+include "footer.php";
+include "connect.php";
+?>

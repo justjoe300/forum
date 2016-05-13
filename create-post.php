@@ -4,4 +4,7 @@
  * Created by Joseph Gage.
  * Date: 5/11/2016
  * Time: 11:12 pm
- */ 
+ */
+
+include "header.php";
+include "footer.php";

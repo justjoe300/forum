@@ -23,8 +23,10 @@
         <a href="index.php">Home</a>
         <a href="create-category.php">Create Category</a>
         <a href="create-post.php">Create Post</a>
+        <div id="user-top-bar">Will be adding code here later.</div>
+
     </div>
     <hr />
-
+<div id="page-content">
 
 
