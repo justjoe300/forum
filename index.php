@@ -22,6 +22,14 @@
  * When you have it ready, just send me credentials for an admin account and either put the source on Github or email to me.
  */
 include "header.php";
-include "footer.php";
 include "connect.php";
+
+
+
+
+
+
+
+
+include "footer.php";
 ?>
