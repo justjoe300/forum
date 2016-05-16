@@ -53,9 +53,16 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
         echo '</ul></div>';
     } else {
         $sql_query = "INSERT INTO
-                        users(user_name, user_password, user_email, user_firstname, user_lastname, user_date, user)
-                      VALUES";
+                        users(user_name, user_email, user_firstname, user_lastname, user_password, user_date, user_level)
+                      VALUES('" . mysql_real_escape_string($_POST['user_name']) . "',
+                             '" . mysql_real_escape_string($_POST['user_email']) . "',
+
+                             '" . sha1($_POST['user_pass']) . "',
+                       '" . mysql_real_escape_string($_POST['user_email']) . "',
+                        NOW(),
+                        0)";
     }
 }
 
 include "footer.php";
+
