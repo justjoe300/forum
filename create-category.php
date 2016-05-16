@@ -8,4 +8,17 @@
  */
 
 include "header.php";
-include "footer.php";
+
+
+echo '<tr>';
+echo '<td>';
+echo '<h3><a href="">Category name</a></h3> Category description goes here';
+echo '</td>';
+echo '<td class="rightpart">';
+echo '<a href="">Topic subject</a> goes here';
+echo '</td>';
+echo '</tr>';
+
+
+include 'footer.php';
+?>

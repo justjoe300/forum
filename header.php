@@ -28,5 +28,3 @@
     </div>
     <hr />
 <div id="page-content">
-
-

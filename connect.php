@@ -6,10 +6,6 @@
  * Time: 9:56 PM
  *
  * This is the file that makes my database connection for MySQL.
- * $server = localhost
- * $username = joseph
- * $password = andy6337
- * $database = forum_data
  *
  *
  *
@@ -28,3 +24,4 @@ if(!mysqli_connect($server, $username,  $password, $database))
     echo "For testing purposes I am notifying you that the connection is successful.";
 }
 ?>
+

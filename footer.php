@@ -6,8 +6,8 @@
  * Time: 6:53 PM
  */
 ?>
-</div><!-- page-content -->
-</div><!-- wrapper -->
-<div id="page-footer">Created by Joseph Gage. May 2016.</div>
-</body>
-</html>
+        </div><!-- page-content -->
+        </div><!-- wrapper -->
+        <div id="page-footer">Created by Joseph Gage. May 2016.</div>
+    </body>
+</html>";
