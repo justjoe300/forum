@@ -9,10 +9,8 @@
 
 
 
-
-
 body {
-    background-color: #00728B;
+    background-color: #4E4E4E;
     text-align: center;         /* make sure IE centers the page too */
 }
 
@@ -21,7 +19,7 @@ body {
     margin: 0 auto;             /* center the page */
 }
 
-#page-content {
+#content {
     background-color: #fff;
     border: 1px solid #000;
     float: left;
@@ -31,7 +29,7 @@ body {
     width: 100%;                /* fill up the entire div */
 }
 
-#nav-menu {
+#menu {
     float: left;
     border: 1px solid #000;
     border-bottom: none;        /* avoid a double border */
@@ -44,11 +42,11 @@ body {
     font-size: 85%;
 }
 
-#nav-menu a:hover {
+#menu a:hover {
     background-color: #009FC1;
 }
 
-#user-top-bar {
+#userbar {
     background-color: #fff;
     float: right;
     width: 250px;

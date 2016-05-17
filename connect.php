@@ -17,11 +17,10 @@ $username   = 'joseph';
 $password   = 'andy6337';
 $database   = 'forum_data';
 
-if(!mysqli_connect($server, $username,  $password, $database))
+$link = mysqli_connect($server, $username,  $password, $database);
+
+if(!$link)
 {
     exit('Error: could not establish database connection');
-} else {
-    echo "For testing purposes I am notifying you that the connection is successful.";
 }
 ?>
-

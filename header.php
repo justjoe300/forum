@@ -6,6 +6,8 @@
  * Time: 6:53 PM
  *
  */
+
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,9 +24,20 @@
     <div id="nav-menu">
         <a href="index.php">Home</a>
         <a href="create-category.php">Create Category</a>
-        <a href="create-post.php">Create Post</a>
-        <div id="user-top-bar">Will be adding code here later.</div>
+        <a href="create-topic.php">Create Topic</a>
+        <div id="userbar">
+        <?php
+        if(isset($_SESSION['signed_in'])) {
+            $signedin = $_SESSION['signed_in'];
+            if($signedin == 1) {
+                echo 'Hello ' . $_SESSION['user_name'] . '. Not you? <a href="user-signout.php">Sign out</a>';
+            }
+        } else {
+            echo '<a href="user-signin.php">Sign in</a> or <a href="user-signup.php">create an account</a>.';
+        }
 
+        ?>
+        </div>
     </div>
     <hr />
-<div id="page-content">
+    <div id="page-content">
