@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
         if(!ctype_alnum($_POST['user_name'])) {
             $errors[] = 'The Username can only contain characters and numbers';
         }
-        if(strlen($_POST['user_name']) < 30) {
+        if(strlen($_POST['user_name']) > 30) {
             $errors[] = 'The Username cannot be longer than 30 characters.';
         }
     } else {
@@ -51,16 +51,25 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
             echo '<li>' .  $value . '</li>';
         }
         echo '</ul></div>';
+        echo '<a href="user-signup.php">Try again.</a>';
     } else {
         $sql_query = "INSERT INTO
-                        users(user_name, user_email, user_firstname, user_lastname, user_password, user_date, user_level)
-                      VALUES('" . mysql_real_escape_string($_POST['user_name']) . "',
-                             '" . mysql_real_escape_string($_POST['user_email']) . "',
+                        users(user_name, user_email, user_firstname, user_lastname, user_password, user_readonly, user_admin, user_date)
+                      VALUES('" . mysqli_real_escape_string($link, $_POST['user_name']) . "',
+                            '" . mysqli_real_escape_string($link, $_POST['user_email']) . "',
+                            '" . mysqli_real_escape_string($link, $_POST['user_firstname']) . "',
+                            '" . mysqli_real_escape_string($link, $_POST['user_lastname']) . "',
+                            '" . password_hash($_POST['user_password'], PASSWORD_DEFAULT) . "',
+                            0, 0, NOW())";
 
-                             '" . sha1($_POST['user_pass']) . "',
-                       '" . mysql_real_escape_string($_POST['user_email']) . "',
-                        NOW(),
-                        0)";
+        $result = mysqli_query($link, $sql_query);
+        if(!$result) {
+            echo "There was a problem with the sign up process. Please try again later. Thank you!";
+            echo mysqli_error($link);
+            echo "You may click <a href='user-signup.php'>HERE</a> to try again.";
+        } else {
+            echo "You have registered successfully! You can now <a href='user-signin.php'>SIGN IN!</a>and begin posting to the forum.";
+        }
     }
 }
 

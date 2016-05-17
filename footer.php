@@ -10,4 +10,5 @@
         </div><!-- wrapper -->
         <div id="page-footer">Created by Joseph Gage. May 2016.</div>
     </body>
-</html>";
+</html>
+
