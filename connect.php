@@ -13,8 +13,8 @@
 
 
 $server = 'localhost';
-$username   = 'joseph';
-$password   = 'andy6337';
+$username   = 'root';
+$password   = '';
 $database   = 'forum_data';
 
 $link = mysqli_connect($server, $username,  $password, $database);
